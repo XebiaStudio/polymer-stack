@@ -8,9 +8,10 @@
             "last 2 versions"
           ]
         },
+        "modules": false,
         "loose": true
       }
     ],
-    "stage-3"
+    "stage-2"
   ]
 }
