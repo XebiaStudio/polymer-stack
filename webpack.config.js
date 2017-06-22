@@ -2,6 +2,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const target = process.env.npm_lifecycle_event;
 
@@ -9,7 +10,11 @@ const minimize = target === 'build' || target === 'bundle';
 
 const devtool = minimize ? 'source-maps' : 'eval-source-maps';
 
-const plugins = [];
+const plugins = [
+  new HtmlWebpackPlugin({
+    template: 'index.html',
+  }),
+];
 
 if (minimize) {
   plugins.push(
@@ -32,13 +37,13 @@ module.exports = {
   entry: './src/my-app.html',
   output: {
     path: path.resolve(__dirname, './build'),
-    publicPath: '/build/',
     filename: 'bundle.js',
   },
   module: {
     loaders: [
       {
         test: /\.html$/,
+        exclude: require.resolve('./index.html'),
         use: [
           {loader: 'babel-loader'},
           {
