@@ -6,7 +6,6 @@
     "babel-loader": "^7.1.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-2": "^6.24.1",
-    "del": "^2.2.0",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.0",
     "eslint-plugin-html": "^2.0.0",
@@ -21,6 +20,7 @@
     "lint:javascript": "eslint . --ext js,html --ignore-path .gitignore",
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI",
+    "prebuild": "rm -rf build",
     "build": "webpack",
     "bundle": "webpack",
     "start": "webpack-dev-server"
