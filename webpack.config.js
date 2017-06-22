@@ -37,7 +37,7 @@ module.exports = {
   entry: './src/my-app.html',
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: 'bundle.js',
+    filename: 'bundle.[chunkhash:8].js',
   },
   module: {
     loaders: [
