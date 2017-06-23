@@ -26,12 +26,14 @@
     "postinstall": "bower install",
     "build": "webpack",
     "bundle": "webpack",
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server | npm run watch",
     "preserve": "npm run build",
-    "serve": "history-server build"
+    "serve": "history-server build",
+    "watch": "browser-sync start --proxy localhost:8080 --files 'src/**/*.*' 'index.html' '*.js'"
   },
   "private": true,
   "dependencies": {
+    "browser-sync": "^2.18.12",
     "webpack-copy-plugin": "^0.0.4",
     "webpack-dev-server": "^2.5.0"
   }
