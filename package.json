@@ -47,6 +47,8 @@
   "private": true,
   "dependencies": {
     "redux": "^3.7.1",
+    "ts-loader": "^2.2.0",
+    "typescript": "^2.3.4",
     "webpack-copy-plugin": "^0.0.4",
     "webpack-dev-server": "^2.5.0"
   }
