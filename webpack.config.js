@@ -3,6 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const target = process.env.npm_lifecycle_event;
 
@@ -14,6 +15,17 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: 'index.html',
   }),
+  new CopyWebpackPlugin([{
+    from: 'images/**',
+  }, {
+    from: 'manifest.json',
+  }, {
+    from: 'bower_components/webcomponentsjs/*.js',
+    flatten: true,
+  }, {
+     from: 'service-worker.js',
+  },
+  ]),
 ];
 
 if (minimize) {

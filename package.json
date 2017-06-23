@@ -6,10 +6,12 @@
     "babel-loader": "^7.1.0",
     "babel-preset-env": "^1.5.2",
     "babel-preset-stage-2": "^6.24.1",
+    "copy-webpack-plugin": "^4.0.1",
     "eslint": "^3.19.0",
     "eslint-config-google": "^0.7.0",
     "eslint-plugin-html": "^2.0.0",
     "file-loader": "^0.11.2",
+    "history-server": "^1.2.0",
     "html-webpack-plugin": "^2.28.0",
     "wc-loader": "^1.1.4",
     "webpack": "^3.0.0",
@@ -23,10 +25,13 @@
     "prebuild": "rm -rf build",
     "build": "webpack",
     "bundle": "webpack",
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server",
+    "preserve": "npm run build",
+    "serve": "history-server build"
   },
   "private": true,
   "dependencies": {
+    "webpack-copy-plugin": "^0.0.4",
     "webpack-dev-server": "^2.5.0"
   }
 }
