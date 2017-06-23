@@ -154,6 +154,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         }
       }
 
+      // eslint-disable-next-line class-methods-use-this
       _pageChanged(page) {
         // Load page import on demand. Show 404 page if fails
         import(`./my-${page}.html`);
