@@ -23,6 +23,7 @@
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI",
     "prebuild": "rm -rf build",
+    "postinstall": "bower install",
     "build": "webpack",
     "bundle": "webpack",
     "start": "webpack-dev-server",
