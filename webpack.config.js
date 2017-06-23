@@ -1,9 +1,10 @@
 /* eslint-env node */
-var path = require('path');
-var webpack = require('webpack');
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+const path = require('path');
+const webpack = require('webpack');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin;
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const target = process.env.npm_lifecycle_event;
 
@@ -15,16 +16,20 @@ const plugins = [
   new HtmlWebpackPlugin({
     template: 'index.html',
   }),
-  new CopyWebpackPlugin([{
-    from: 'images/**',
-  }, {
-    from: 'manifest.json',
-  }, {
-    from: 'bower_components/webcomponentsjs/*.js',
-    flatten: true,
-  }, {
-     from: 'service-worker.js',
-  },
+  new CopyWebpackPlugin([
+    {
+      from: 'images/**',
+    },
+    {
+      from: 'manifest.json',
+    },
+    {
+      from: 'bower_components/webcomponentsjs/*.js',
+      flatten: true,
+    },
+    {
+      from: 'service-worker.js',
+    },
   ]),
 ];
 
@@ -37,7 +42,7 @@ if (minimize) {
       output: {
         comments: false, // Also removes licences
       },
-    })
+    }),
   );
 }
 
@@ -49,7 +54,8 @@ module.exports = {
   entry: './src/my-app.html',
   output: {
     path: path.resolve(__dirname, './build'),
-    filename: 'bundle.[chunkhash:8].js',
+    filename: '[name].[chunkhash:8].js',
+    chunkFilename: '[name].[chunkhash:8].js',
   },
   module: {
     loaders: [
@@ -57,7 +63,7 @@ module.exports = {
         test: /\.html$/,
         exclude: require.resolve('./index.html'),
         use: [
-          {loader: 'babel-loader'},
+          { loader: 'babel-loader' },
           {
             loader: 'wc-loader',
             options: {
