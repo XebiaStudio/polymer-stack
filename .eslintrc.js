@@ -28,7 +28,7 @@ const config = {
   },
 };
 
-if (target === 'lint:javascript') {
+if (target !== 'lint:html') {
   config.extends.push('prettier');
   config.plugins.push('prettier');
   config.rules['prettier/prettier'] = [
