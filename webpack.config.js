@@ -10,7 +10,7 @@ const target = process.env.npm_lifecycle_event;
 
 const minimize = target === 'build' || target === 'bundle';
 
-const devtool = minimize ? 'source-maps' : 'eval-source-maps';
+const devtool = minimize ? 'source-maps' : 'source-maps';
 
 const plugins = [
   new HtmlWebpackPlugin({
@@ -59,6 +59,12 @@ module.exports = {
   },
   module: {
     loaders: [
+      {
+        test: require.resolve(
+          './bower_components/polymer-redux/dist/polymer-redux.html',
+        ),
+        use: [{ loader: 'exports-loader', options: 'PolymerRedux' }],
+      },
       {
         test: /\.html$/,
         exclude: require.resolve('./index.html'),
