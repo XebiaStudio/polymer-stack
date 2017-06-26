@@ -8,9 +8,9 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_FRIEND': {
-      const friends = state.friends.slice(0);
-      friends.push(action.friend);
-      return Object.assign({}, state, { friends });
+      const { friends } = state;
+      const { friend } = action;
+      return { ...state, friends: [...friends, friend] };
     }
     default:
       return state;
