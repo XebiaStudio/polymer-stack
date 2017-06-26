@@ -10,7 +10,7 @@ const target = process.env.npm_lifecycle_event;
 
 const minimize = target === 'build' || target === 'bundle';
 
-const devtool = minimize ? 'source-maps' : 'source-maps';
+const devtool = minimize ? 'source-maps' : 'eval-source-maps';
 
 const plugins = [
   new HtmlWebpackPlugin({
