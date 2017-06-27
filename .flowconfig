@@ -1,0 +1,14 @@
+[ignore]
+.*/node_modules/.*
+.*/bower_components/.*
+.*/build/.*
+.*/coverage/.*
+.*/cypress/*.
+
+[libs]
+./interfaces/global.js
+
+[options]
+all=true
+module.name_mapper='.*\(.html$\)' -> 'HTMLImport'
+module.system=haste
