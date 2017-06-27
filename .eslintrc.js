@@ -13,6 +13,7 @@ const config = {
     cy: false,
   },
   rules: {
+    'class-method-use-this': 0,
     'import/no-extraneous-dependencies': [
       'error',
       {

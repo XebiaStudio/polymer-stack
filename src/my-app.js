@@ -48,7 +48,6 @@ class MyApp extends Polymer.Element {
     }
   }
 
-  // eslint-disable-next-line class-methods-use-this
   _pageChanged(page) {
     switch (page) {
       case 'view1': {
