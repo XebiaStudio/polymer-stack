@@ -12,3 +12,4 @@
 all=true
 module.name_mapper='.*\(.html$\)' -> 'HTMLImport'
 module.system=haste
+unsafe.enable_getters_and_setters=true
