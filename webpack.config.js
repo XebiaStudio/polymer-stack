@@ -6,7 +6,7 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = ({ analyzeBundle, build }) => {
+module.exports = ({ analyzeBundle, build, test }) => {
   const minimize = analyzeBundle || build;
 
   const devtool = minimize ? 'source-maps' : 'eval-source-maps';
@@ -49,11 +49,13 @@ module.exports = ({ analyzeBundle, build }) => {
     );
   }
 
+  const filename = test ? '[name].js' : '[name].[chunkhash:8].js';
+
   return {
     entry: './src/my-app.html',
     output: {
       path: path.resolve(__dirname, './build'),
-      filename: '[name].[chunkhash:8].js',
+      filename,
       chunkFilename: '[name].[chunkhash:8].js',
     },
     module: {

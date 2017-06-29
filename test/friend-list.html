@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>my-view1</title>
+
+    <script src="../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="../bower_components/web-component-tester/browser.js"></script>
+
+    <script src="/webpack/main.js"></script>
+  </head>
+  <body>
+    <test-fixture id="friendList">
+      <template>
+        <friend-list></friend-list>
+      </template>
+    </test-fixture>
+
+    <script>
+      suite('Friend list redux tests', () => {
+        test('Friendlist should be loaded', () => {
+          const myView = fixture('friendList');
+          console.log(myView);
+        });
+      });
+    </script>
+  </body>
+</html>
