@@ -1,3 +1,3 @@
-export default function heck(wot) {
+export default function heck(wot: any) {
   console.log('flip!', wot);
 }

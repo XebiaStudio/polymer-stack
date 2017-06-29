@@ -10,6 +10,7 @@
 
 [options]
 all=true
-module.name_mapper='.*\(.html$\)' -> 'HTMLImport'
+module.name_mapper='.*polymer-redux.html$' -> 'PolymerRedux'
+module.name_mapper='.*.html$' -> 'HTMLImport'
 module.system=haste
 unsafe.enable_getters_and_setters=true

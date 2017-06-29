@@ -22,6 +22,8 @@ class MyApp extends Polymer.Element {
     return ['_routePageChanged(routeData.page)'];
   }
 
+  page: ?string;
+
   constructor() {
     super();
 
