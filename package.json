@@ -36,7 +36,9 @@
     "analyze-bundle": "webpack --env.analyzeBundle",
     "webpack-test-server": "webpack-dev-server --env.test",
     "wct": "polymer test",
+    "wct:watch": "polymer test -p",
     "test": "run-p --race webpack-test-server wct",
+    "test:watch": "run-p --race webpack-test-server wct:watch",
     "start": "webpack-dev-server --env.start",
     "preserve": "npm run build",
     "serve": "history-server build"
