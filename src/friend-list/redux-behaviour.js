@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import '../../bower_components/polymer/polymer.html';
 import PolymerRedux from '../../bower_components/polymer-redux/dist/polymer-redux.html';
 
 const initialState = {

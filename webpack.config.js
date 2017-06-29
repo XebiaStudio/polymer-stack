@@ -1,12 +1,16 @@
 /* eslint-env node */
 const path = require('path');
+const { promisify } = require('util');
+const cbGlob = require('glob');
 const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
   .BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = ({ analyzeBundle, build, test }) => {
+const glob = promisify(cbGlob);
+
+module.exports = async ({ analyzeBundle, build, test }) => {
   const minimize = analyzeBundle || build;
 
   const devtool = minimize ? 'source-maps' : 'eval-source-maps';
@@ -51,8 +55,11 @@ module.exports = ({ analyzeBundle, build, test }) => {
 
   const filename = test ? '[name].js' : '[name].[chunkhash:8].js';
 
+  // Also load all lazy entries during test
+  const entry = test ? await glob('./src/**/*html') : './src/my-app.html';
+
   return {
-    entry: './src/my-app.html',
+    entry,
     output: {
       path: path.resolve(__dirname, './build'),
       filename,

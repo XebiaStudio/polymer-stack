@@ -1001,10 +1001,6 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bytes@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/bytes/-/bytes-1.0.0.tgz#3569ede8ba34315fab99c3e92cb04c7220de1fa8"
-
 bytes@2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/bytes/-/bytes-2.3.0.tgz#d5b680a165b6201739acb611542aabc2d8ceb070"
@@ -1928,13 +1924,6 @@ exports-loader@^0.6.4:
     loader-utils "^1.0.2"
     source-map "0.5.x"
 
-express-http-proxy@^0.7.2:
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/express-http-proxy/-/express-http-proxy-0.7.4.tgz#ed6d9caaa0e8ac28be75181c4c634c26376119fc"
-  dependencies:
-    lodash.iserror "^3.1.0"
-    raw-body "^1.1.6"
-
 express-http-proxy@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/express-http-proxy/-/express-http-proxy-1.0.4.tgz#adf2ae3d0dfdc816286e9770f64043a43fc7c527"
@@ -1943,10 +1932,6 @@ express-http-proxy@^1.0.4:
     es6-promise "^3.3.1"
     raw-body "^2.2.0"
     winston "^2.3.1"
-
-express-list-endpoints@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/express-list-endpoints/-/express-list-endpoints-3.0.0.tgz#59144e76b19957f9b117b6350239288f16ee28b7"
 
 express@^4.13.3, express@^4.14.0, express@^4.15.2:
   version "4.15.3"
@@ -2261,7 +2246,7 @@ glob@^6.0.4:
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1:
+glob@^7.0.0, glob@^7.0.3, glob@^7.0.5, glob@^7.1.1, glob@^7.1.2:
   version "7.1.2"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.2.tgz#c19c9df9a028702d678612384a6552404c636d15"
   dependencies:
@@ -2473,7 +2458,7 @@ http-errors@~1.6.1:
     setprototypeof "1.0.3"
     statuses ">= 1.3.1 < 2"
 
-http-proxy-middleware@^0.17.4, http-proxy-middleware@~0.17.4:
+http-proxy-middleware@~0.17.4:
   version "0.17.4"
   resolved "https://registry.yarnpkg.com/http-proxy-middleware/-/http-proxy-middleware-0.17.4.tgz#642e8848851d66f09d4f124912846dbaeb41b833"
   dependencies:
@@ -2504,10 +2489,6 @@ https-browserify@0.0.1:
 iconv-lite@0.4.15:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
-
-iconv-lite@0.4.8:
-  version "0.4.8"
-  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.8.tgz#c6019a7595f2cefca702eab694a010bcd9298d20"
 
 ieee754@^1.1.4:
   version "1.1.8"
@@ -2942,10 +2923,6 @@ lodash-es@^4.2.1:
 lodash.cond@^4.3.0:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/lodash.cond/-/lodash.cond-4.5.2.tgz#f471a1da486be60f6ab955d17115523dd1d255d5"
-
-lodash.iserror@^3.1.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/lodash.iserror/-/lodash.iserror-3.1.1.tgz#297b9a05fab6714bc2444d7cc19d1d7c44b5ecec"
 
 lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.2, lodash@^4.17.3, lodash@^4.17.4, lodash@^4.2.0, lodash@^4.2.1, lodash@^4.3.0:
   version "4.17.4"
@@ -3650,13 +3627,6 @@ randombytes@^2.0.0, randombytes@^2.0.1:
 range-parser@^1.0.3, range-parser@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/range-parser/-/range-parser-1.2.0.tgz#f49be6b487894ddc40dcc94a322f611092e00d5e"
-
-raw-body@^1.1.6:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/raw-body/-/raw-body-1.3.4.tgz#ccc7ddfc46b72861cdd5bb433c840b70b6f27f54"
-  dependencies:
-    bytes "1.0.0"
-    iconv-lite "0.4.8"
 
 raw-body@^2.2.0:
   version "2.2.0"
@@ -4535,12 +4505,6 @@ wc-loader@^1.1.4:
     object-assign "^4.1.0"
     parse5 "^3.0.1"
     polyclean "^1.3.1"
-
-web-component-tester-proxy@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/web-component-tester-proxy/-/web-component-tester-proxy-1.0.0.tgz#dff9574df5c5d3aeb5678641303adde6c14a359b"
-  dependencies:
-    express-http-proxy "^0.7.2"
 
 webpack-bundle-analyzer@^2.8.2:
   version "2.8.2"

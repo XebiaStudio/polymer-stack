@@ -18,6 +18,7 @@
     "exports-loader": "^0.6.4",
     "express-http-proxy": "^1.0.4",
     "file-loader": "^0.11.2",
+    "glob": "^7.1.2",
     "history-server": "^1.2.0",
     "html-webpack-plugin": "^2.28.0",
     "npm-run-all": "^4.0.2",
