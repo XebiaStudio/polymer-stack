@@ -32,9 +32,9 @@
     "test": "polymer test",
     "test:integration": "polymer build # test that psk builds without error with the CLI",
     "prebuild": "rm -rf build",
-    "build": "webpack",
-    "analyze-bundle": "webpack",
-    "start": "webpack-dev-server",
+    "build": "webpack --env.build",
+    "analyze-bundle": "webpack --env.analyzeBundle",
+    "start": "webpack-dev-server --env.start",
     "preserve": "npm run build",
     "serve": "history-server build"
   },
