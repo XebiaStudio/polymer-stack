@@ -164,31 +164,49 @@ declare module 'express-http-proxy/test/verbs' {
 
 // Filename aliases
 declare module 'express-http-proxy/app/steps/buildProxyReq.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/buildProxyReq'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/buildProxyReq',
+  >;
 }
 declare module 'express-http-proxy/app/steps/copyProxyResHeadersToUserRes.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/copyProxyResHeadersToUserRes'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/copyProxyResHeadersToUserRes',
+  >;
 }
 declare module 'express-http-proxy/app/steps/decorateProxyReqBody.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/decorateProxyReqBody'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/decorateProxyReqBody',
+  >;
 }
 declare module 'express-http-proxy/app/steps/decorateProxyReqOpts.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/decorateProxyReqOpts'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/decorateProxyReqOpts',
+  >;
 }
 declare module 'express-http-proxy/app/steps/decorateUserRes.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/decorateUserRes'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/decorateUserRes',
+  >;
 }
 declare module 'express-http-proxy/app/steps/prepareProxyReq.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/prepareProxyReq'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/prepareProxyReq',
+  >;
 }
 declare module 'express-http-proxy/app/steps/resolveProxyHost.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/resolveProxyHost'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/resolveProxyHost',
+  >;
 }
 declare module 'express-http-proxy/app/steps/resolveProxyReqPath.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/resolveProxyReqPath'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/resolveProxyReqPath',
+  >;
 }
 declare module 'express-http-proxy/app/steps/sendProxyRequest.js' {
-  declare module.exports: $Exports<'express-http-proxy/app/steps/sendProxyRequest'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/app/steps/sendProxyRequest',
+  >;
 }
 declare module 'express-http-proxy/app/steps/sendUserRes.js' {
   declare module.exports: $Exports<'express-http-proxy/app/steps/sendUserRes'>;
@@ -239,10 +257,14 @@ declare module 'express-http-proxy/test/https.js' {
   declare module.exports: $Exports<'express-http-proxy/test/https'>;
 }
 declare module 'express-http-proxy/test/integration/proxyReqPathResolver.js' {
-  declare module.exports: $Exports<'express-http-proxy/test/integration/proxyReqPathResolver'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/test/integration/proxyReqPathResolver',
+  >;
 }
 declare module 'express-http-proxy/test/middlewareCompatibility.js' {
-  declare module.exports: $Exports<'express-http-proxy/test/middlewareCompatibility'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/test/middlewareCompatibility',
+  >;
 }
 declare module 'express-http-proxy/test/path.js' {
   declare module.exports: $Exports<'express-http-proxy/test/path'>;
@@ -257,13 +279,17 @@ declare module 'express-http-proxy/test/status.js' {
   declare module.exports: $Exports<'express-http-proxy/test/status'>;
 }
 declare module 'express-http-proxy/test/support/proxyTarget.js' {
-  declare module.exports: $Exports<'express-http-proxy/test/support/proxyTarget'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/test/support/proxyTarget',
+  >;
 }
 declare module 'express-http-proxy/test/timeout.js' {
   declare module.exports: $Exports<'express-http-proxy/test/timeout'>;
 }
 declare module 'express-http-proxy/test/unit/resolveProxyReqPath.js' {
-  declare module.exports: $Exports<'express-http-proxy/test/unit/resolveProxyReqPath'>;
+  declare module.exports: $Exports<
+    'express-http-proxy/test/unit/resolveProxyReqPath',
+  >;
 }
 declare module 'express-http-proxy/test/urlParsing.js' {
   declare module.exports: $Exports<'express-http-proxy/test/urlParsing'>;

@@ -23,7 +23,6 @@ declare module 'eslint-config-google' {
  * needed.
  */
 
-
 // Filename aliases
 declare module 'eslint-config-google/index' {
   declare module.exports: $Exports<'eslint-config-google'>;

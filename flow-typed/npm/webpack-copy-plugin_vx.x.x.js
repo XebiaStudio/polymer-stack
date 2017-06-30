@@ -23,7 +23,6 @@ declare module 'webpack-copy-plugin' {
  * needed.
  */
 
-
 // Filename aliases
 declare module 'webpack-copy-plugin/index' {
   declare module.exports: $Exports<'webpack-copy-plugin'>;

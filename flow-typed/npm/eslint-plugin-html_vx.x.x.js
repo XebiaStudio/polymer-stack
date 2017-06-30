@@ -54,7 +54,9 @@ declare module 'eslint-plugin-html/src/__tests__/plugin.js' {
   declare module.exports: $Exports<'eslint-plugin-html/src/__tests__/plugin'>;
 }
 declare module 'eslint-plugin-html/src/__tests__/TransformableString.js' {
-  declare module.exports: $Exports<'eslint-plugin-html/src/__tests__/TransformableString'>;
+  declare module.exports: $Exports<
+    'eslint-plugin-html/src/__tests__/TransformableString',
+  >;
 }
 declare module 'eslint-plugin-html/src/extract.js' {
   declare module.exports: $Exports<'eslint-plugin-html/src/extract'>;
@@ -63,5 +65,7 @@ declare module 'eslint-plugin-html/src/index.js' {
   declare module.exports: $Exports<'eslint-plugin-html/src/index'>;
 }
 declare module 'eslint-plugin-html/src/TransformableString.js' {
-  declare module.exports: $Exports<'eslint-plugin-html/src/TransformableString'>;
+  declare module.exports: $Exports<
+    'eslint-plugin-html/src/TransformableString',
+  >;
 }

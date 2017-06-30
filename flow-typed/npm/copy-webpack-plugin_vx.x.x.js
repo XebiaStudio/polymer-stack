@@ -80,7 +80,9 @@ declare module 'copy-webpack-plugin/dist/path.js' {
   declare module.exports: $Exports<'copy-webpack-plugin/dist/path'>;
 }
 declare module 'copy-webpack-plugin/dist/preProcessPattern.js' {
-  declare module.exports: $Exports<'copy-webpack-plugin/dist/preProcessPattern'>;
+  declare module.exports: $Exports<
+    'copy-webpack-plugin/dist/preProcessPattern',
+  >;
 }
 declare module 'copy-webpack-plugin/dist/processPattern.js' {
   declare module.exports: $Exports<'copy-webpack-plugin/dist/processPattern'>;
@@ -89,14 +91,20 @@ declare module 'copy-webpack-plugin/dist/shouldIgnore.js' {
   declare module.exports: $Exports<'copy-webpack-plugin/dist/shouldIgnore'>;
 }
 declare module 'copy-webpack-plugin/dist/toLooksLikeDirectory.js' {
-  declare module.exports: $Exports<'copy-webpack-plugin/dist/toLooksLikeDirectory'>;
+  declare module.exports: $Exports<
+    'copy-webpack-plugin/dist/toLooksLikeDirectory',
+  >;
 }
 declare module 'copy-webpack-plugin/dist/writeDirectoryToAssets.js' {
-  declare module.exports: $Exports<'copy-webpack-plugin/dist/writeDirectoryToAssets'>;
+  declare module.exports: $Exports<
+    'copy-webpack-plugin/dist/writeDirectoryToAssets',
+  >;
 }
 declare module 'copy-webpack-plugin/dist/writeFile.js' {
   declare module.exports: $Exports<'copy-webpack-plugin/dist/writeFile'>;
 }
 declare module 'copy-webpack-plugin/dist/writeFileToAssets.js' {
-  declare module.exports: $Exports<'copy-webpack-plugin/dist/writeFileToAssets'>;
+  declare module.exports: $Exports<
+    'copy-webpack-plugin/dist/writeFileToAssets',
+  >;
 }

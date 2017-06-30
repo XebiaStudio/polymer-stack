@@ -73,7 +73,9 @@ declare module 'eslint-config-airbnb-base/legacy.js' {
   declare module.exports: $Exports<'eslint-config-airbnb-base/legacy'>;
 }
 declare module 'eslint-config-airbnb-base/rules/best-practices.js' {
-  declare module.exports: $Exports<'eslint-config-airbnb-base/rules/best-practices'>;
+  declare module.exports: $Exports<
+    'eslint-config-airbnb-base/rules/best-practices',
+  >;
 }
 declare module 'eslint-config-airbnb-base/rules/errors.js' {
   declare module.exports: $Exports<'eslint-config-airbnb-base/rules/errors'>;
