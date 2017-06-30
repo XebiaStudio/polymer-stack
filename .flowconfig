@@ -4,6 +4,8 @@
 .*/build/.*
 .*/coverage/.*
 .*/cypress/*.
+.*/webpack\.config\.js
+.*/wct\.conf\.js
 
 [libs]
 ./interfaces/global.js
