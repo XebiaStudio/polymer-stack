@@ -12,6 +12,7 @@ class MyRedux extends Polymer.Element {
   static get is() {
     return 'my-redux';
   }
+  static is: string;
 
   static get properties() {
     return {
