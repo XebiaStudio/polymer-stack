@@ -3,9 +3,9 @@ import type { Reducer, Store } from 'redux';
 import '../../bower_components/polymer/polymer.html';
 import PolymerRedux from '../../bower_components/polymer-redux/dist/polymer-redux.html';
 
-type Friend = string;
+export type Friend = string;
 
-type AppState = {
+export type AppState = {
   friends: Friend[],
 };
 

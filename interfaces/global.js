@@ -6,7 +6,9 @@ declare module HTMLImport {
 }
 
 declare module PolymerRedux {
-  declare var exports: (store: Object) => void;
+  declare var exports: (
+    store: Object,
+  ) => (Class<PolymerElement>) => Class<PolymerElement>;
 }
 
 declare class PolymerElement extends HTMLElement {
