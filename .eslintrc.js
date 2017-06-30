@@ -13,7 +13,7 @@ const config = {
     cy: false,
   },
   rules: {
-    'class-method-use-this': 0,
+    'class-methods-use-this': "off",
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -22,7 +22,8 @@ const config = {
           '**/*.test.jsx',
           'test/**',
           '**/*.story.jsx',
-          '**/webpack*',
+          '**/webpack.config.js',
+          '**/wct.conf.js',
         ],
       },
     ],
