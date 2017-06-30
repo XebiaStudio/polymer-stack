@@ -1,0 +1,5 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+  // disable vs code JS validation, it does not yet support dynamic import statements.
+  "javascript.validate.enable": false
+}
