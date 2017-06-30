@@ -1,9 +1,9 @@
 const target = process.env.npm_lifecycle_event;
 
 const config = {
-  extends: ['airbnb-base'],
+  extends: ['airbnb-base', 'plugin:flowtype/recommended'],
   parser: 'babel-eslint',
-  plugins: ['html'],
+  plugins: ['html', 'flowtype'],
   env: {
     jest: true,
     browser: true,
@@ -13,7 +13,7 @@ const config = {
     cy: false,
   },
   rules: {
-    'class-methods-use-this': "off",
+    'class-methods-use-this': 'off',
     'import/no-extraneous-dependencies': [
       'error',
       {
@@ -27,6 +27,7 @@ const config = {
         ],
       },
     ],
+    'flowtype/no-types-missing-file-annotation': 'off',
   },
 };
 

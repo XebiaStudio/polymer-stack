@@ -1,13 +1,12 @@
-import ReduxBehaviour, { type Friend } from './redux-behaviour';
+import ReduxBehaviour, { type AppState } from './redux-behaviour';
 
 class FriendList extends ReduxBehaviour(Polymer.Element) {
-  friends: Friend[];
-
   static get is() {
     return 'friend-list';
   }
   static is: string;
 
+  friends: $PropertyType<AppState, 'friends'>;
   static get properties() {
     return {
       friends: {
@@ -19,3 +18,5 @@ class FriendList extends ReduxBehaviour(Polymer.Element) {
 }
 
 window.customElements.define(FriendList.is, FriendList);
+
+export default FriendList;
