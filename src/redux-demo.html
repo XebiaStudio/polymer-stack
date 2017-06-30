@@ -1,0 +1,33 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="shared-styles.html">
+
+<link rel="import" href="friend-list/friend-counter.html">
+<link rel="import" href="friend-list/friend-input.html">
+<link rel="import" href="friend-list/friend-list.html">
+
+<dom-module id="redux-demo">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+
+        padding: 10px;
+      }
+    </style>
+
+    <div class="card">
+      <h1>Redux demo</h1>
+      <friend-counter></friend-counter>
+      <friend-input></friend-input>
+      <friend-list></friend-list>
+    </div>
+  </template>
+
+  <script>
+    class ReduxDemo extends Polymer.Element {
+      static get is() { return 'redux-demo'; }
+    }
+
+    window.customElements.define(ReduxDemo.is, ReduxDemo);
+  </script>
+</dom-module>
