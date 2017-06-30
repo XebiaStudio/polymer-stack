@@ -6,6 +6,7 @@
 .*/cypress/*.
 .*/webpack\.config\.js
 .*/wct\.conf\.js
+.*/type-coverage/.*
 
 [libs]
 ./interfaces/global.js
