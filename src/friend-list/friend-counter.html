@@ -5,32 +5,5 @@
     <h3>You have [[friendCount]] frens!
   </template>
 
-  <script>
-    import ReduxBehaviour from './redux-behaviour';
-
-    class FriendCounter extends ReduxBehaviour(Polymer.Element) {
-      static get is() {
-        return 'friend-counter';
-      }
-
-      static get properties() {
-        return {
-          friends: {
-            type: Array,
-            statePath: 'friends',
-          },
-          friendCount: {
-            type: Number,
-            computed: 'computeFriendCount(friends)',
-          },
-        };
-      }
-
-      computeFriendCount(friends) {
-        return friends.length;
-      }
-    }
-
-    window.customElements.define(FriendCounter.is, FriendCounter);
-  </script>
+  <script src="./friend-counter.ts"></script>
 </dom-module>

@@ -9,24 +9,7 @@
     </ul>
   </template>
 
-  <script>
-    import ReduxBehaviour from './redux-behaviour';
+  <script src="./friend-list.ts">
 
-    class FriendList extends ReduxBehaviour(Polymer.Element) {
-      static get is() {
-        return 'friend-list';
-      }
-
-      static get properties() {
-        return {
-          friends: {
-            type: Array,
-            statePath: 'friends',
-          },
-        };
-      }
-    }
-
-    window.customElements.define(FriendList.is, FriendList);
   </script>
 </dom-module>

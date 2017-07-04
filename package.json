@@ -28,9 +28,10 @@
     "webpack-bundle-analyzer": "^2.8.2"
   },
   "scripts": {
-    "lint": "run-p lint:javascript lint:html",
+    "lint": "run-p lint:javascript lint:typescript lint:html",
     "lint:javascript": "eslint . --ignore-path .gitignore --fix --cache .",
     "lint:html": "eslint . --ext html --ignore-path .gitignore --fix --cache .",
+    "lint:typescript": "tslint --fix -c tslint.json 'src/**/*.ts'",
     "test:integration": "polymer build # test that psk builds without error with the CLI",
     "prebuild": "rm -rf build",
     "build": "webpack --env.build",
@@ -48,7 +49,10 @@
   "dependencies": {
     "redux": "^3.7.1",
     "ts-loader": "^2.2.0",
-    "typescript": "^2.3.4",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1",
+    "typescript-fsa": "^2.3.1",
+    "typescript-fsa-reducers": "^0.4.4",
     "webpack-copy-plugin": "^0.0.4",
     "webpack-dev-server": "^2.5.0"
   }
