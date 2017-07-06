@@ -1,0 +1,19 @@
+[ignore]
+.*/node_modules/.*
+.*/bower_components/.*
+.*/build/.*
+.*/coverage/.*
+.*/cypress/*.
+.*/webpack\.config\.js
+.*/wct\.conf\.js
+.*/type-coverage/.*
+
+[libs]
+./interfaces/global.js
+
+[options]
+all=true
+module.name_mapper='.*polymer-redux.html$' -> 'PolymerRedux'
+module.name_mapper='.*.html$' -> 'HTMLImport'
+module.system=haste
+unsafe.enable_getters_and_setters=true

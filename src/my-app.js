@@ -1,9 +1,15 @@
-import heck from './lib';
-
 class MyApp extends Polymer.Element {
   static get is() {
     return 'my-app';
   }
+
+  static is: string;
+
+  $: {
+    drawer: {
+      close: () => void,
+    },
+  };
 
   static get properties() {
     return {
@@ -15,6 +21,10 @@ class MyApp extends Polymer.Element {
       rootPattern: String,
       routeData: Object,
       subroute: String,
+      showcontent: {
+        value: true,
+        type: Boolean,
+      },
     };
   }
 
@@ -22,16 +32,16 @@ class MyApp extends Polymer.Element {
     return ['_routePageChanged(routeData.page)'];
   }
 
+  page: ?string;
+
   constructor() {
     super();
-
-    heck('fren');
 
     // Get root pattern for app-route, for more info about `rootPath` see: https://www.polymer-project.org/2.0/docs/upgrade#urls-in-templates
     this.rootPattern = new URL(this.rootPath).pathname;
   }
 
-  _routePageChanged(page) {
+  _routePageChanged(page: string) {
     // Polymer 2.0 will call with `undefined` on initialization.
     // Ignore until we are properly called with a string.
     if (page === undefined) {
@@ -48,7 +58,7 @@ class MyApp extends Polymer.Element {
     }
   }
 
-  _pageChanged(page) {
+  _pageChanged(page: string) {
     switch (page) {
       case 'view1': {
         import(/* webpackChunkName: "view1" */ './my-view1.html');
