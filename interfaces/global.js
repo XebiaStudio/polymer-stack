@@ -15,10 +15,13 @@ declare class PolymerElement extends HTMLElement {
   rootPattern: string,
   rootPath: string,
   $: Object,
+  connectedCallback(): void,
+  disconnectedCallback(): void,
 }
 
 declare var Polymer: {
   Element: Class<PolymerElement>,
+  GestureEventListeners: (Class<*>) => Class<*>,
 };
 
 declare var window: {

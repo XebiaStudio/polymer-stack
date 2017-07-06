@@ -21,6 +21,10 @@ class MyApp extends Polymer.Element {
       rootPattern: String,
       routeData: Object,
       subroute: String,
+      showcontent: {
+        value: true,
+        type: Boolean,
+      },
     };
   }
 

@@ -33,7 +33,7 @@ const reducer: Reducer<AppState, FriendActions> = (
   }
 };
 
-const store: Store<AppState, FriendActions> = createStore(
+export const store: Store<AppState, FriendActions> = createStore(
   reducer,
   // eslint-disable-next-line no-underscore-dangle
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
