@@ -56,7 +56,7 @@ module.exports = async ({ analyzeBundle, build, test }) => {
   const filename = test ? '[name].js' : '[name].[chunkhash:8].js';
 
   // Also load all lazy entries during test
-  const entry = test ? await glob('./src/**/*html') : './src/my-app.html';
+  const entry = test ? await glob('./src/**/!(*.spec).html') : './src/my-app.html';
 
   return {
     entry,
