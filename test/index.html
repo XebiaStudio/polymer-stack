@@ -30,9 +30,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       ];
 
       const testFiles = tests.reduce(
-        (result, test) => result.concat([`${test}.html?dom=shadow`, `${test}.html?dom=shady`]),
-         [],
-         );
+        (result, test) => result.concat(
+          [
+            `${test}.html`,
+            `${test}.html?wc-ce&wc-shadydom&wc-shimcssproperties`
+          ]
+        ),
+        [],
+      );
       WCT.loadSuites(testFiles);
     }());
   </script>
