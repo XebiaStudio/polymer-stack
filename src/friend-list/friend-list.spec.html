@@ -20,6 +20,7 @@
     </test-fixture>
 
     <script>
+      /* global suite setup fixture test flush */
       suite('FriendList', () => {
         let el;
         setup(() => {
@@ -34,7 +35,7 @@
           ];
 
           flush(() => {
-            listItems = el.shadowRoot.querySelectorAll('li');
+            const listItems = el.shadowRoot.querySelectorAll('li');
             expect(listItems[0].textContent).to.equal('Fren 1');
             expect(listItems).to.have.length(el.friends.length);
             done();
