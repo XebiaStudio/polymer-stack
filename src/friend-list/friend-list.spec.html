@@ -13,17 +13,32 @@
     <script src="/webpack/main.js"></script>
   </head>
   <body>
-    <test-fixture id="friendList">
+    <test-fixture id="FriendList">
       <template>
         <friend-list></friend-list>
       </template>
     </test-fixture>
 
     <script>
-      suite('Friend list redux tests', () => {
-        test('Friendlist should be loaded', () => {
-          const myView = fixture('friendList');
-          console.log(myView);
+      suite('FriendList', () => {
+        let el;
+        setup(() => {
+          el = fixture('FriendList');
+        });
+
+        test('FriendList should render friends', (done) => {
+          el.friends = [
+            'Fren 1',
+            'Fren 2',
+            'Fren 3',
+          ];
+
+          flush(() => {
+            listItems = el.shadowRoot.querySelectorAll('li');
+            expect(listItems[0].textContent).to.equal('Fren 1');
+            expect(listItems).to.have.length(el.friends.length);
+            done();
+          });
         });
       });
     </script>
