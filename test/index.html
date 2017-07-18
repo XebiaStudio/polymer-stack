@@ -25,14 +25,19 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     // eslint-disable-next-line func-names
     (function () {
       const tests = [
-        'my-view1',
-        'friend-list',
+        '../src/my-view1.spec',
+        '../src/friend-list/friend-list.spec',
       ];
 
       const testFiles = tests.reduce(
-        (result, test) => result.concat([`${test}.html?dom=shadow`, `${test}.html?wc-shadydom=true`]),
-         [],
-         );
+        (result, test) => result.concat(
+          [
+            `${test}.html?dom=shadow`,
+            `${test}.html?dom=shady`,
+          ],
+        ),
+        [],
+      );
       WCT.loadSuites(testFiles);
     }());
   </script>
