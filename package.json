@@ -43,7 +43,7 @@
     "wct": "polymer test",
     "wct:watch": "polymer test -p",
     "test": "run-p test:unit test:wct",
-    "test:unit": "jest -c jest-config.json",
+    "test:unit": "jest",
     "test:wct": "run-p --race webpack-test-server wct",
     "test:watch": "run-p --race webpack-test-server wct:watch",
     "start": "webpack-dev-server --env.start",
