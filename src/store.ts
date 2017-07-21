@@ -8,10 +8,15 @@ const initialState: AppState = {
   friends: [],
 };
 
-const reducer = reducerWithInitialState(initialState)
-  .case(AddFriend, (state, payload) => ({...state, friends: [...state.friends, payload.friend] }));
+const reducer = reducerWithInitialState(
+  initialState,
+).case(AddFriend, (state, payload) => ({
+  ...state,
+  friends: [...state.friends, payload.friend],
+}));
 
 export const store: Store<AppState> = createStore(
   reducer,
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+  (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
 );
