@@ -1,6 +1,6 @@
 import { Action } from 'redux';
 import { AddFriend } from './actions';
-import { store } from './redux-behaviour';
+import { store } from '../store';
 
 class FriendInput extends Polymer.GestureEventListeners(Polymer.Element) {
   public static is = 'friend-input';

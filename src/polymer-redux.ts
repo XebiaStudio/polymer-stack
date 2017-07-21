@@ -1,4 +1,4 @@
-import { store } from './friend-list/redux-behaviour';
+import { store } from './store';
 import { AppState } from './friend-list/app-state';
 
 export interface ReduxConnectable extends PolymerElement {

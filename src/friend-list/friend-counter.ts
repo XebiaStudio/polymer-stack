@@ -1,5 +1,5 @@
 import { AppState, Friend } from './app-state';
-import { store } from './redux-behaviour';
+import { store } from '../store';
 import { connect, ReduxConnectable } from '../polymer-redux';
 
 class FriendCounter extends Polymer.Element implements ReduxConnectable {

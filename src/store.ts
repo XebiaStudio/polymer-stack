@@ -1,8 +1,8 @@
 import { Action, createStore, Store } from 'redux';
 import { isType } from 'typescript-fsa';
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
-import { AddFriend } from './actions';
-import { AppState, Friend } from './app-state';
+import { AddFriend } from './friend-list/actions';
+import { AppState, Friend } from './friend-list/app-state';
 
 const initialState: AppState = {
   friends: [],
