@@ -1,19 +1,13 @@
-import { Action, createStore, Store } from 'redux';
+import { Action, combineReducers, createStore, Store } from 'redux';
 import { isType } from 'typescript-fsa';
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { AddFriend } from './friend-list/actions';
+import friendReducer from './friend-list/friend-reducer';
 import { AppState, Friend } from './types';
 
-const initialState: AppState = {
-  friends: [],
-};
-
-const reducer = reducerWithInitialState(
-  initialState,
-).case(AddFriend, (state, payload) => ({
-  ...state,
-  friends: [...state.friends, payload.friend],
-}));
+const reducer = combineReducers({
+  friends: friendReducer,
+});
 
 export const store: Store<AppState> = createStore(
   reducer,

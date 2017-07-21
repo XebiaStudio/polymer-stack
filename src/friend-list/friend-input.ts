@@ -9,7 +9,7 @@ class FriendInput extends Polymer.GestureEventListeners(Polymer.Element) {
     const field = this.$.field;
     const friend = field.value;
     if (friend) {
-      store.dispatch(AddFriend({ friend }));
+      store.dispatch(AddFriend(friend));
       field.value = null;
       field.focus();
     }
