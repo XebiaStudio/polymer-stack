@@ -4,6 +4,7 @@ import { store } from './redux-behaviour';
 class FriendCounter extends Polymer.Element {
 
   public static is = 'friend-counter';
+  private unsubscribe: () => void;
 
   public static properties = {
     friendCount: {
