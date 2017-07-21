@@ -1,6 +1,6 @@
-import actionCreatorFactory from 'typescript-fsa';
+import typescriptFsa from 'typescript-fsa';
 import { Friend } from '../types';
 
-const actionCreator = actionCreatorFactory();
+const actionCreator = typescriptFsa();
 
-export const AddFriend = actionCreator<Friend>('ADD_FRIEND');
+export const addFriend = actionCreator<Friend>('ADD_FRIEND');

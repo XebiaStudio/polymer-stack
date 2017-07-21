@@ -9,8 +9,8 @@ interface ReduxConnectableClass {
   new (): ReduxConnectable;
 }
 
-export function connect(Component: ReduxConnectableClass) {
-  return class ConnectedComponent extends Component {
+export function connect(component: ReduxConnectableClass) {
+  return class ConnectedComponent extends component {
     private unsubscribe: () => void;
 
     public connectedCallback() {

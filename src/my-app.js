@@ -45,7 +45,6 @@ class MyApp extends Polymer.Element {
   }
 
   _pageChanged(page) {
-    console.log('page changed', page);
     switch (page) {
       case 'view1': {
         import(/* webpackChunkName: "view1" */ './my-view1.html');
@@ -70,7 +69,6 @@ class MyApp extends Polymer.Element {
   }
 
   _equals(a, b) {
-    console.log('equals', a, b, a === b);
     return a === b;
   }
 }
