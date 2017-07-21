@@ -1,5 +1,5 @@
 import { store } from './store';
-import { AppState } from './friend-list/app-state';
+import { AppState } from './types';
 
 export interface ReduxConnectable extends PolymerElement {
   onState(state: AppState): void;

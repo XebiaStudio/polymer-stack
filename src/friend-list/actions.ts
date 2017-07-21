@@ -1,5 +1,5 @@
 import actionCreatorFactory from 'typescript-fsa';
-import { Friend } from './app-state';
+import { Friend } from '../types';
 
 const actionCreator =  actionCreatorFactory();
 

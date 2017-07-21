@@ -2,7 +2,7 @@ import { Action, createStore, Store } from 'redux';
 import { isType } from 'typescript-fsa';
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { AddFriend } from './friend-list/actions';
-import { AppState, Friend } from './friend-list/app-state';
+import { AppState, Friend } from './types';
 
 const initialState: AppState = {
   friends: [],

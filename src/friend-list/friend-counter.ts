@@ -1,4 +1,4 @@
-import { AppState, Friend } from './app-state';
+import { AppState, Friend } from '../types';
 import { store } from '../store';
 import { connect, ReduxConnectable } from '../polymer-redux';
 

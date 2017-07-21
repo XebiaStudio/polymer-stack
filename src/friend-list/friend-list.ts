@@ -1,5 +1,5 @@
 import { Unsubscribe } from 'redux';
-import { AppState, Friend } from './app-state';
+import { AppState, Friend } from '../types';
 import { connect, ReduxConnectable } from '../polymer-redux';
 
 class FriendList extends Polymer.Element implements ReduxConnectable {
