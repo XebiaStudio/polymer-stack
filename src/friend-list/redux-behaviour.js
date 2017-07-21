@@ -4,7 +4,7 @@ import PolymerRedux from '../../bower_components/polymer-redux/dist/polymer-redu
 import friendListReducer from './friend-list-reducer';
 
 const appReducer = combineReducers({
-  friends: friendListReducer
+  friends: friendListReducer,
 });
 
 const store = createStore(

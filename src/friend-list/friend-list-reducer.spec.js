@@ -6,7 +6,7 @@ describe('friendListReducer', () => {
   it('can add a friend', () => {
     const newState = friendListReducer(initialState, {
       type: 'ADD_FRIEND',
-      friend: 'Test'
+      friend: 'Test',
     });
 
     expect(newState).toHaveLength(1);
@@ -15,7 +15,7 @@ describe('friendListReducer', () => {
 
   it('can gracefully ignore unknown actions', () => {
     const newState = friendListReducer(initialState, {
-      type: 'NONEXISTENT'
+      type: 'NONEXISTENT',
     });
 
     expect(newState).toEqual(initialState);
