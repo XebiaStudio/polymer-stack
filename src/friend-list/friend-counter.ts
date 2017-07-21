@@ -1,7 +1,8 @@
 import { AppState, Friend } from './app-state';
 import { store } from './redux-behaviour';
+import { connect, ReduxConnectable } from '../polymer-redux';
 
-class FriendCounter extends Polymer.Element {
+class FriendCounter extends Polymer.Element implements ReduxConnectable {
 
   public static is = 'friend-counter';
   private unsubscribe: () => void;
@@ -14,21 +15,9 @@ class FriendCounter extends Polymer.Element {
 
   private friendCount: number;
 
-  public connectedCallback() {
-    super.connectedCallback();
-    this.updateFriendCount();
-    this.unsubscribe = store.subscribe(() => this.updateFriendCount());
-  }
-
-  // never called, iron-pages is more like a tab bar that just hides elements.
-  public disconnectedCallback() {
-    super.disconnectedCallback();
-    this.unsubscribe();
-  }
-
-  private updateFriendCount() {
+  onState(state: AppState) {
     this.friendCount = store.getState().friends.length;
   }
 }
 
-window.customElements.define(FriendCounter.is, FriendCounter);
+window.customElements.define(FriendCounter.is, connect(FriendCounter));

@@ -6,11 +6,8 @@ declare interface PolymerElement {
   disconnectedCallback(): void;
 
 }
-// declare function PolymerElement(): void;
 
 declare var Polymer: {
   Element: PolymerElement
   GestureEventListeners: (e: PolymerElement) => PolymerElement
 };
-// declare var PolymerApolloMixin: any;
-// declare module 'polymer-apollo';
