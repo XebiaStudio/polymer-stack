@@ -1,11 +1,9 @@
-import { AppState, Friend } from '../types';
-import { store } from '../store';
 import { connect, ReduxConnectable } from '../polymer-redux';
+import { store } from '../store';
+import { AppState, Friend } from '../types';
 
 class FriendCounter extends Polymer.Element implements ReduxConnectable {
-
   public static is = 'friend-counter';
-  private unsubscribe: () => void;
 
   public static properties = {
     friendCount: {
@@ -13,11 +11,13 @@ class FriendCounter extends Polymer.Element implements ReduxConnectable {
     },
   };
 
+  private unsubscribe: () => void;
+
   private friendCount: number;
 
-  onState(state: AppState) {
+  public onState(state: AppState) {
     this.friendCount = store.getState().friends.length;
   }
 }
 
-window.customElements.define(FriendCounter.is, connect(FriendCounter));
+// window.customElements.define(FriendCounter.is, connect(FriendCounter));

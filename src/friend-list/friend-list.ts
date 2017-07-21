@@ -1,13 +1,13 @@
 import { Unsubscribe } from 'redux';
-import { AppState, Friend } from '../types';
 import { connect, ReduxConnectable } from '../polymer-redux';
+import { AppState, Friend } from '../types';
 
 class FriendList extends Polymer.Element implements ReduxConnectable {
   public static is = 'friend-list';
 
   private friends: Friend[];
 
-  onState(state: AppState) {
+  public onState(state: AppState) {
     this.friends = state.friends;
   }
 }
