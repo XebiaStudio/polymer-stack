@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+    <title>my-view1</title>
+
+    <script src="../../bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+    <script src="../../bower_components/webcomponentsjs/custom-elements-es5-adapter.js"></script>
+    <script src="../../bower_components/web-component-tester/browser.js"></script>
+
+    <script src="/webpack/main.js"></script>
+  </head>
+  <body>
+    <test-fixture id="FriendList">
+      <template>
+        <friend-list></friend-list>
+      </template>
+    </test-fixture>
+
+    <script>
+      /* global suite setup fixture test flush */
+      suite('FriendList', () => {
+        let el;
+        setup(() => {
+          el = fixture('FriendList');
+        });
+
+        test('FriendList should render friends', (done) => {
+          el.friends = [
+            'Fren 1',
+            'Fren 2',
+            'Fren 3',
+          ];
+
+          flush(() => {
+            const listItems = el.shadowRoot.querySelectorAll('li');
+            expect(listItems[0].textContent).to.equal('Fren 1');
+            expect(listItems).to.have.length(el.friends.length);
+            done();
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
