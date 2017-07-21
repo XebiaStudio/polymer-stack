@@ -1,9 +1,0 @@
-type Query {
-  hello: String
-  user(name: String!): User
-}
-
-type User {
-  id: String
-  name: String
-}
