@@ -20,4 +20,4 @@ class FriendCounter extends Polymer.Element implements ReduxConnectable {
   }
 }
 
-// window.customElements.define(FriendCounter.is, connect(FriendCounter));
+window.customElements.define(FriendCounter.is, connect(FriendCounter));
