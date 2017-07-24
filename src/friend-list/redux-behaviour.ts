@@ -1,0 +1,15 @@
+import { createStore, combineReducers, Reducer, Store } from 'redux';
+import { AppState } from '../types';
+import { PolymerRedux } from '../polymer-redux';
+import friendReducer from './friend-reducer';
+
+const appReducer: Reducer<any> = combineReducers({
+  friends: friendReducer,
+});
+
+const store: Store<AppState> = createStore(
+  appReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
+
+export default PolymerRedux(store);

@@ -1,5 +1,3 @@
-import heck from './lib';
-
 class MyApp extends Polymer.Element {
   static get is() {
     return 'my-app';
@@ -24,8 +22,6 @@ class MyApp extends Polymer.Element {
 
   constructor() {
     super();
-
-    heck('fren');
 
     // Get root pattern for app-route, for more info about `rootPath` see: https://www.polymer-project.org/2.0/docs/upgrade#urls-in-templates
     this.rootPattern = new URL(this.rootPath).pathname;
@@ -70,6 +66,10 @@ class MyApp extends Polymer.Element {
         import(/* webpackChunkName: "404" */ './my-view404.html');
         break;
     }
+  }
+
+  _equals(a, b) {
+    return a === b;
   }
 }
 

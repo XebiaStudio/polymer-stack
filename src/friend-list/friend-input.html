@@ -7,33 +7,5 @@
     <button on-tap="addFriend">add friend</button>
   </template>
 
-  <script>
-    import ReduxBehaviour from './redux-behaviour';
-
-    class FriendInput extends Polymer.GestureEventListeners(ReduxBehaviour(Polymer.Element)) {
-      static get is() {
-        return 'friend-input';
-      }
-
-      static get actions() {
-        return {
-          add: friend => ({
-            type: 'ADD_FRIEND',
-            friend,
-          }),
-        };
-      }
-
-      addFriend() {
-        const field = this.$.field;
-        if (field.value) {
-          this.dispatch('add', field.value);
-          field.value = null;
-          field.focus();
-        }
-      }
-    }
-
-    window.customElements.define(FriendInput.is, FriendInput);
-  </script>
+  <script src="./friend-input.ts"></script>
 </dom-module>

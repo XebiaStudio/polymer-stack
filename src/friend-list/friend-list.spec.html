@@ -29,9 +29,9 @@
 
         test('FriendList should render friends', (done) => {
           el.friends = [
-            'Fren 1',
-            'Fren 2',
-            'Fren 3',
+            { name: 'Fren 1' },
+            { name: 'Fren 2' },
+            { name: 'Fren 3' },
           ];
 
           flush(() => {

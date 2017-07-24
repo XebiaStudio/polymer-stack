@@ -2,6 +2,7 @@
   "name": "polymer-starter-kit",
   "license": "BSD-3-Clause",
   "devDependencies": {
+    "@types/jest": "^20.0.4",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^20.0.3",
@@ -27,14 +28,17 @@
     "jest": "^20.0.4",
     "npm-run-all": "^4.0.2",
     "prettier": "^1.4.4",
+    "tslint-config-airbnb": "^5.2.1",
+    "tslint-config-prettier": "^1.1.0",
     "wc-loader": "^1.1.4",
     "webpack": "^3.0.0",
     "webpack-bundle-analyzer": "^2.8.2"
   },
   "scripts": {
-    "lint": "run-p lint:javascript lint:html",
+    "lint": "run-p lint:javascript lint:typescript lint:html",
     "lint:javascript": "eslint . --ignore-path .gitignore --fix --cache .",
     "lint:html": "eslint . --ext html --ignore-path .gitignore --fix --cache .",
+    "lint:typescript": "tslint --fix -c tslint.json 'src/**/*.ts' && prettier --write --single-quote true --trailing-comma all '**/*.ts'",
     "test:integration": "polymer build # test that psk builds without error with the CLI",
     "prebuild": "rm -rf build",
     "build": "webpack --env.build",
@@ -43,7 +47,7 @@
     "wct": "polymer test",
     "wct:watch": "polymer test -p",
     "test": "run-p test:unit test:wct",
-    "test:unit": "jest",
+    "test:unit": "jest --config jest-config.json",
     "test:wct": "run-p --race webpack-test-server wct",
     "test:watch": "run-p --race webpack-test-server wct:watch",
     "start": "webpack-dev-server --env.start",
@@ -53,6 +57,11 @@
   "private": true,
   "dependencies": {
     "redux": "^3.7.1",
+    "ts-loader": "^2.2.0",
+    "tslint": "^5.4.3",
+    "typescript": "^2.4.1",
+    "typescript-fsa": "^2.3.1",
+    "typescript-fsa-reducers": "^0.4.4",
     "webpack-copy-plugin": "^0.0.4",
     "webpack-dev-server": "^2.5.0"
   }
