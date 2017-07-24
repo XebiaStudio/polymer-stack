@@ -1,24 +1,18 @@
 class MyApp extends Polymer.Element {
-  static get is() {
-    return 'my-app';
-  }
+  public static readonly is = 'my-app';
 
-  static get properties() {
-    return {
-      page: {
-        type: String,
-        reflectToAttribute: true,
-        observer: 'pageChanged',
-      },
-      rootPattern: String,
-      routeData: Object,
-      subroute: String,
-    };
-  }
+  public static readonly properties = {
+    page: {
+      type: String,
+      reflectToAttribute: true,
+      observer: 'pageChanged',
+    },
+    rootPattern: String,
+    routeData: Object,
+    subroute: String,
+  };
 
-  static get observers() {
-    return ['routePageChanged(routeData.page)'];
-  }
+  public static readonly observers = ['routePageChanged(routeData.page)'];
 
   private rootPath: string;
   private rootPattern: string;
@@ -31,7 +25,7 @@ class MyApp extends Polymer.Element {
     this.rootPattern = new URL(this.rootPath).pathname;
   }
 
-  private routePageChanged(page: string) {
+  private routePageChanged(page?: string) {
     // Polymer 2.0 will call with `undefined` on initialization.
     // Ignore until we are properly called with a string.
     if (page === undefined) {
