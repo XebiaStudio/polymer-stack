@@ -9,8 +9,9 @@ const reducer = combineReducers({
   friends: friendReducer,
 });
 
+const reduxDevtools = (window as any).__REDUX_DEVTOOLS_EXTENSION__;
+
 export const store: Store<AppState> = createStore(
   reducer,
-  (window as any).__REDUX_DEVTOOLS_EXTENSION__ &&
-    (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+  reduxDevtools && reduxDevtools(),
 );
