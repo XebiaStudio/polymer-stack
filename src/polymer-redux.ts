@@ -1,5 +1,9 @@
+import { Store } from 'redux';
 import { store } from './store';
 import { AppState } from './types';
+
+/* tslint:disable:variable-name */
+export let PolymerRedux: (store: Store<AppState>) => Object;
 
 export interface ReduxConnectable extends PolymerElement {
   onState(state: AppState): void;
