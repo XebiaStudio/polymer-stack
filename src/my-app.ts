@@ -8,7 +8,7 @@ class MyApp extends Polymer.Element {
       page: {
         type: String,
         reflectToAttribute: true,
-        observer: '_pageChanged',
+        observer: 'pageChanged',
       },
       rootPattern: String,
       routeData: Object,
@@ -17,8 +17,12 @@ class MyApp extends Polymer.Element {
   }
 
   static get observers() {
-    return ['_routePageChanged(routeData.page)'];
+    return ['routePageChanged(routeData.page)'];
   }
+
+  private rootPath: string;
+  private rootPattern: string;
+  private page: string;
 
   constructor() {
     super();
@@ -27,7 +31,7 @@ class MyApp extends Polymer.Element {
     this.rootPattern = new URL(this.rootPath).pathname;
   }
 
-  _routePageChanged(page) {
+  private routePageChanged(page: string) {
     // Polymer 2.0 will call with `undefined` on initialization.
     // Ignore until we are properly called with a string.
     if (page === undefined) {
@@ -44,7 +48,7 @@ class MyApp extends Polymer.Element {
     }
   }
 
-  _pageChanged(page) {
+  private pageChanged(page: string) {
     switch (page) {
       case 'view1': {
         import(/* webpackChunkName: "view1" */ './my-view1.html');
@@ -66,10 +70,6 @@ class MyApp extends Polymer.Element {
         import(/* webpackChunkName: "404" */ './my-view404.html');
         break;
     }
-  }
-
-  _equals(a, b) {
-    return a === b;
   }
 }
 

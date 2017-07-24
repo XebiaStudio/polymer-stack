@@ -9,3 +9,9 @@ declare var Polymer: {
   Element: PolymerElement;
   GestureEventListeners: (e: PolymerElement) => PolymerElement;
 };
+
+
+declare module "*.html" {
+    var html: number;
+    export default html;
+}
