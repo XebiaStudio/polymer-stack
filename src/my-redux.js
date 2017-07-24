@@ -2,11 +2,8 @@
  * `my-redux`
  * Redux demo
  *
- * @customElement
  * @polymer
- * @polymerElement
- * @demo demo/index.html
- * @memberof Polymer
+ * @extends HTMLElement
  */
 class MyRedux extends Polymer.Element {
   static get is() {
