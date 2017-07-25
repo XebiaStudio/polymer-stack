@@ -58,7 +58,7 @@ module.exports = async ({ analyzeBundle, build, test }) => {
   // Also load all lazy entries during test
   const entry = test
     ? await glob('./src/**/!(*.spec).html')
-    : './src/my-app.html';
+    : './src/ing-app-securities.html';
 
   return {
     entry,

@@ -1,0 +1,24 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/ing-uic-top-bar/ing-uic-top-bar.html">
+<link rel="import" href="../bower_components/ing-orange-search/ing-orange-search-input-box.html">
+<dom-module id="ing-app-securities">
+  <template>
+    <style>
+      img.logo {
+        width: 118px;
+        height: 30px;
+        padding-left: calc(8px * 2);
+      }
+    </style>
+    <ing-uic-top-bar>
+      <a href="[[rootPath]]" slot="top-left">
+        <img class="logo" src$="[[rootPath]]assets/ing-logo.svg" alt="ING Super awesome banking">
+      </a>
+      <ing-orange-search-input-box slot="top-main"
+                                   search-string-input="blabla"
+                                   show-arrow-icon="false">
+      </ing-orange-search-input-box>
+    </ing-uic-top-bar>
+  </template>
+  <script src="./ing-app-securities.ts"></script>
+</dom-module>
